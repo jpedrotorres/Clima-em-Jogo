@@ -175,4 +175,3 @@ function confirmChoice() {
 }
 
 document.addEventListener('DOMContentLoaded', showEvent);
-
