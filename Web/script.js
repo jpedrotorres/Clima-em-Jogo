@@ -125,6 +125,7 @@ function showEvent() {
 
     if (availableEvents.length === 0) {
         alert("All events have been used. Game over!");
+	window.location.replace("index.html")
         return;
     }
 
@@ -146,7 +147,7 @@ function makeChoice(choiceIndex) {
     currentImpact.economyChange = choice.economyChange;
 
     const eventCard = document.getElementById('event-card');
-    eventCard.style.transform = choiceIndex === 0 ? 'rotateY(-10deg)' : 'rotateY(10deg)'; // Tilt towards choice
+    eventCard.style.transform = choiceIndex === 0 ? 'rotate(-10deg) scale(0.9)' : 'rotate(10deg) scale(0.9)'; // Tilt towards choice
 
     document.getElementById('impact-text').innerText = `Impact: Citizens: ${currentImpact.citizensChange}, Environment: ${currentImpact.environmentChange}, Economy: ${currentImpact.economyChange}`;
     document.getElementById('impact').style.display = 'block';
@@ -166,12 +167,14 @@ function confirmChoice() {
     const direction = choiceIndex === 0 ? '-150%' : '150%'; // Increase movement distance
 
     eventCard.style.transition = 'transform 0.5s ease';
-    eventCard.style.transform = `translateX(${direction}) rotateY(${choiceIndex === 0 ? -20 : 20}deg)`; // Move and rotate away
+    eventCard.style.transform = `translateX(${direction}) rotate(${choiceIndex === 0 ? -50 : 50}deg)`; // Move and rotate away
 
     setTimeout(() => {
         eventCard.style.transform = 'none'; // Reset transform for next event
         showEvent(); // Show new event
     }, 500); // Delay for animation to complete
 }
+
+document.querySelector(".backHome").addEventListener("click", event=> window.location.replace("index.html"))
 
 document.addEventListener('DOMContentLoaded', showEvent);
