@@ -9,19 +9,28 @@
 <body>
     <div id="game">
         <h1>Ecologic Reign</h1>
-        <div id="card">
+        <div id="event-card" class="card">
             <p id="event-text">Event will appear here.</p>
-            <div id="choices">
-                <button class="choice" onclick="makeChoice(0)">Choice 1</button>
-                <button class="choice" onclick="makeChoice(1)">Choice 2</button>
+        </div>
+        <div id="card-container">
+            <div id="left-card" class="card" onclick="makeChoice(0)">
+                <p id="left-choice">Choice 1</p>
+            </div>
+            <div id="right-card" class="card" onclick="makeChoice(1)">
+                <p id="right-choice">Choice 2</p>
             </div>
         </div>
+        <div id="impact">
+            <p id="impact-text">Impact will appear here.</p>
+            <button id="confirm-button" onclick="confirmChoice()">Confirm Choice</button>
+        </div>
         <div id="stats">
-            <p>Citizens: <span id="citizens">100</span></p>
-            <p>Environment: <span id="environment">100</span></p>
-            <p>Economy: <span id="economy">100</span></p>
+            <p>Citizens: <span id="citizens">50</span></p>
+            <p>Environment: <span id="environment">50</span></p>
+            <p>Economy: <span id="economy">50</span></p>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
