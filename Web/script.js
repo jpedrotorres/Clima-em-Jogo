@@ -9,7 +9,7 @@ const events = [
     {
         text: "A factory wants to open in the region. What do you decide?",
         choices: [
-            { text: "Allow the factory.", citizensChange: 100, environmentChange: -10, economyChange: 15 },
+            { text: "Allow the factory.", citizensChange: 10, environmentChange: -10, economyChange: 15 },
             { text: "Reject the factory.", citizensChange: -5, environmentChange: 5, economyChange: -10 }
         ]
     },
