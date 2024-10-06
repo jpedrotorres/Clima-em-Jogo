@@ -1,6 +1,6 @@
-let citizens = 100;
-let environment = 100;
-let economy = 100;
+let citizens = 50;
+let environment = 50;
+let economy = 50;
 
 const events = [
     {
