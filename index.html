@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Reigns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Eco Reigns</h1>
+        <div id="card">
+            <p id="event-text">Event will appear here.</p>
+            <div id="choices">
+                <button class="choice" onclick="makeChoice(0)">Choice 1</button>
+                <button class="choice" onclick="makeChoice(1)">Choice 2</button>
+            </div>
+        </div>
+        <div id="stats">
+            <p>Citizens: <span id="citizens">100</span></p>
+            <p>Environment: <span id="environment">100</span></p>
+            <p>Economy: <span id="economy">100</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
