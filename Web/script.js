@@ -1,6 +1,7 @@
 let citizens = 50;
 let environment = 50;
 let economy = 50;
+let numQuestion= 10;
 
 const events = [
     {
