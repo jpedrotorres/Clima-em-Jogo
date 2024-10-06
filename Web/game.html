@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Climate at stake</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="game.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+	<header>
+		<nav>
+			<span class= "backHome"><span class="arrowBack material-symbols-outlined">arrow_back_ios</span> back</span>
+
+			<h1><a href= "index.html">Climate at stake</a></h1>
+		</nav>
+	</header>
+	<main>
+		<section id="game">
+			<div id= "cardGame">
+				<div id="event-card">
+					<p id="event-text">Event will appear here.</p>
+				</div>
+			
+				<div id="impact">
+					<p id="impact-text">Impact will appear here.</p>
+					<button id="confirm-button" onclick="confirmChoice()">Confirm Choice</button>
+				</div>
+			</div>
+			<div id="stats">
+				<p>Citizens: <span id="citizens">50</span></p>
+ 				<p>Environment: <span id="environment">50</span></p>
+				<p>Economy: <span id="economy">50</span></p>
+			</div>
+
+			<div id="card-container">
+				<div id="left-card" class="card" onclick="makeChoice(0)">
+					<p id="left-choice">Choice 1</p>
+				</button>
+				<div id="right-card" class="card" onclick="makeChoice(1)">
+					<p id="right-choice">Choice 2</p>
+				</div>
+			</div>
+		</section>
+
+	</main>
+	
+ 	<script src="script.js"></script>
+</body>
+</html>
