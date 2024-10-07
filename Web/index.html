@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecologic Reign</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="game">
+
+    <div id="entry-screen" class="entry-container">
+        <h1 class="game-title">Ecologic Reign</h1>
+        <p class="description">Citizen Management, Environment and Economy with your choices</p>
+        <button id="start-btn" class="start-button">Start</button>
+    </div>
+
+    <div id="game" style="display: none;">
         <h1>Ecologic Reign</h1>
         <div id="event-card" class="card">
             <p id="event-text">Event will appear here.</p>
@@ -30,7 +39,8 @@
             <p>Economy: <span id="economy">50</span></p>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>

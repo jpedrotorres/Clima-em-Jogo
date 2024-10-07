@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e8f5e9; /* Light green background */
-    color: #333; /* Darker text for better contrast */
+    background-color: #e8f5e9;
+    color: #333;
     text-align: center;
 }
 
@@ -10,13 +10,13 @@ body {
     margin: 50px auto;
     padding: 30px;
     border-radius: 15px;
-    background-color: #c8e6c9; /* Light green for the game area */
+    background-color: #c8e6c9;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
     font-size: 2.5em;
-    color: #388e3c; /* Dark green */
+    color: #000000;
     margin-bottom: 20px;
 }
 
@@ -24,15 +24,15 @@ h1 {
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    background-color: #81c784; /* Green card */
+    background-color: #81c784;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     max-width: 80%;
-    transition: transform 0.5s ease; /* Smooth transform */
+    transition: transform 0.5s ease;
 }
 
 #event-text {
     font-size: 1.5em;
-    color: #fff; /* White text for better visibility */
+    color: #fff;
     text-align: center;
 }
 
@@ -47,7 +47,7 @@ h1 {
     margin: 0 10px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #4caf50; /* Nature green */
+    background-color: #4caf50;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     transition: transform 0.2s;
@@ -59,13 +59,13 @@ h1 {
 
 #impact {
     margin-bottom: 20px;
-    display: none; /* Hidden until a choice is made */
+    display: none;
 }
 
 #impact-text {
     font-size: 1.2em;
     font-weight: bold;
-    color: #333; /* Darker text */
+    color: #333;
     margin-bottom: 15px;
 }
 
@@ -73,7 +73,7 @@ h1 {
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
-    background-color: #ff9800; /* Orange for confirm button */
+    background-color: #ff9800;
     color: white;
     font-size: 1.1em;
     cursor: pointer;
@@ -81,7 +81,7 @@ h1 {
 }
 
 #confirm-button:hover {
-    background-color: #f57c00; /* Darker orange on hover */
+    background-color: #f57c00;
 }
 
 #stats {
@@ -90,36 +90,111 @@ h1 {
 }
 
 #stats p {
-    background-color: #b2dfdb; /* Light teal for stats */
+    background-color: #b2dfdb;
     padding: 10px;
     border-radius: 8px;
     margin: 5px 0;
 }
 
-/* Animation styles */
+.entry-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.game-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background-color: #92d189;
+    transform: translateY(-5px);
+}
+
 @keyframes maxCitizens {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes maxEnvironment {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(360deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 @keyframes maxEconomy {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-20px); }
-    50% { transform: translateY(20px); }
-    75% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    75% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-/* Game over animations */
 @keyframes gameOverEffect {
-    0% { opacity: 0; transform: scale(0.5); }
-    50% { opacity: 1; transform: scale(1.2); }
-    100% { opacity: 0; transform: scale(1); }
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
 }

@@ -99,7 +99,7 @@ function checkMaxScores() {
         }, 1000);
     }
     if (citizens === 150 || environment === 150 || economy === 150) {
-        endGame(); // Call the end game function if any score is maxed out
+        endGame();
     }
 }
 
@@ -108,8 +108,8 @@ function endGame() {
     gameContainer.classList.add('gameOverEffect');
     setTimeout(() => {
         alert("Congratulations! You've achieved maximum points in one of the categories!");
-        resetGame(); // Optionally reset the game after a message
-    },10000); // Delay to allow the effect to show
+        resetGame();
+    },10000);
 }
 
 function resetGame() {
@@ -129,7 +129,7 @@ function showEvent() {
     }
 
     const currentEvent = availableEvents[Math.floor(Math.random() * availableEvents.length)];
-    usedEvents.push(currentEvent.text); // Mark event as used
+    usedEvents.push(currentEvent.text);
 
     document.getElementById('impact').style.display = 'none';
     
@@ -138,6 +138,15 @@ function showEvent() {
     document.getElementById('left-choice').innerText = currentChoices[0].text;
     document.getElementById('right-choice').innerText = currentChoices[1].text;
 }
+
+document.getElementById('start-btn').addEventListener('click', function() {
+    document.getElementById('entry-screen').style.display = 'none';
+
+    document.getElementById('game').style.display = 'block';
+
+    showEvent();
+});
+
 
 function makeChoice(choiceIndex) {
     const choice = currentChoices[choiceIndex];
@@ -163,15 +172,15 @@ function confirmChoice() {
     const impactDiv = document.getElementById('impact');
 
     const choiceIndex = currentChoices[0].citizensChange === currentImpact.citizensChange ? 0 : 1;
-    const direction = choiceIndex === 0 ? '-150%' : '150%'; // Increase movement distance
+    const direction = choiceIndex === 0 ? '-150%' : '150%';
 
     eventCard.style.transition = 'transform 0.5s ease';
     eventCard.style.transform = `translateX(${direction}) rotateY(${choiceIndex === 0 ? -20 : 20}deg)`; // Move and rotate away
 
     setTimeout(() => {
-        eventCard.style.transform = 'none'; // Reset transform for next event
-        showEvent(); // Show new event
-    }, 500); // Delay for animation to complete
+        eventCard.style.transform = 'none';
+        showEvent();
+    }, 500);
 }
 
 document.addEventListener('DOMContentLoaded', showEvent);
