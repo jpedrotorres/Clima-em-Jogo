@@ -1,7 +1,7 @@
 <h1>Ecologic Reign</h1>
 
 <h2>English</h2>
-Ecologic Reign is a game developed to increase awareness about climate change and the importance of adopting sustainable pratices. By using a choioe-based system, we aim to educate players about the causes and consequences of climate change!
+<p><strong>Ecologic Reign</strong> is a game developed to increase awareness about climate change and the importance of adopting sustainable pratices. By using a choioe-based system, we aim to educate players about the causes and consequences of climate change!</p>
 
 If you have any suggestions on how we can enhance our project, please fell free to reach out!
 
