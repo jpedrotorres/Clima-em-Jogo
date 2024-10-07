@@ -105,6 +105,14 @@ h1 {
     background-color: #f0f0f0;
 }
 
+.entry-image {
+    width: 60%;           
+    max-height: 300px;     
+    object-fit: cover;     
+    border-radius: 10px;   
+    margin-bottom: 20px;   
+}
+
 .game-title {
     font-size: 3rem;
     font-weight: bold;
